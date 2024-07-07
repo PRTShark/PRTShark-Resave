@@ -18,6 +18,10 @@ body {
     height: 100%;
     filter: blur(5px);
     z-index: -1;
+    background-image: url('https://github.com/PRTShark/PRTShark-Resave/blob/main/0aaa2001a3106660bb1e46a010db1f320bcccc3a.jpg?raw=true');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     opacity: 0.2;
 }
 .header {
@@ -54,11 +58,12 @@ body {
     color: #000;
     position: relative; /* 使伪元素定位相对于标题 */
     padding-left: 30px; /* 为圆点留出空间 */
+    font-size: 1.5em; /* 文字大小 */
 }
 .section h2::before {
     content: "●"; /* 圆点字符 */
     color: #000; /* 圆点颜色 */
-    font-size: 1.5em; /* 圆点大小 */
+    font-size: 1.5em; /* 圆点大小，和文字高度一样 */
     position: absolute;
     left: 0;
     top: 50%;
@@ -137,4 +142,19 @@ body {
     color: #fff;
     text-align: center;
     padding: 10px;
-    pos
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .header h1 {
+        font-size: 2em;
+    }
+    .header p {
+        font-size: 0.9em;
+    }
+}
