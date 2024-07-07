@@ -6,13 +6,13 @@
     <title>PRTShark的个人网页</title>
     <style>
         body {
-            font-family: 'Microsoft JhengHei UI', Arial, sans-serif;
+            font-family: "Microsoft JhengHei UI", Arial, sans-serif;
+            background: #000;
             color: #333;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background: #000; /* 背景颜色 */
-            background-image: url('https://github.com/PRTShark/PRTShark-Resave/blob/main/0aaa2001a3106660bb1e46a010db1f320bcccc3a.jpg?raw=true'); /* 背景图片 */
+            background-image: url('https://github.com/PRTShark/PRTShark-Resave/blob/main/0aaa2001a3106660bb1e46a010db1f320bcccc3a.jpg?raw=true');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -23,20 +23,20 @@
             left: 0;
             width: 100%;
             height: 100%;
-            filter: blur(5px); /* 模糊效果 */
+            filter: blur(5px);
             z-index: -1;
-            background-image: url('https://github.com/PRTShark/PRTShark-Resave/blob/main/0aaa2001a3106660bb1e46a010db1f320bcccc3a.jpg?raw=true'); /* 背景图片 */
+            background-image: url('https://github.com/PRTShark/PRTShark-Resave/blob/main/0aaa2001a3106660bb1e46a010db1f320bcccc3a.jpg?raw=true');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
-            opacity: 0.2; /* 透明度 */
+            opacity: 0.2;
         }
         .header {
             background: rgba(0, 0, 0, 0.7);
             color: #fff;
             padding: 60px 20px;
             text-align: center;
-            border-bottom: 5px solid #000; /* 边框颜色 */
+            border-bottom: 5px solid #000;
         }
         .header h1 {
             font-size: 3em;
@@ -44,57 +44,70 @@
             color: #fff;
         }
         .header p {
-            font-size: 1.5em; /* 增大字体 */
+            font-size: 1.2em;
             color: #ddd;
         }
         .container {
             width: 80%;
             margin: 20px auto;
-            background: rgba(255, 255, 255, 0.9); /* 内容区背景透明 */
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         .section h2 {
             border-bottom: 2px solid #000;
             padding-bottom: 10px;
             margin-bottom: 10px;
-            color: #000; /* 标题颜色 */
-            font-size: 1.8em; /* 增大标题字体 */
+            color: #000;
         }
         .social-links a {
             display: block;
             color: #333;
             text-decoration: none;
-            margin-bottom: 15px; /* 增大间距 */
-            font-size: 1.2em; /* 增大字体 */
+            margin-bottom: 10px;
+            font-size: 1.1em;
         }
         .social-links a:hover {
             text-decoration: underline;
         }
-        .portfolio-container {
+        .portfolio {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px; /* 增加作品之间的间距 */
+            gap: 20px;
         }
         .portfolio-item {
-            flex: 1 1 calc(50% - 20px); /* 两列布局，减去间距 */
+            flex: 1 1 calc(50% - 20px);
+            max-width: calc(50% - 20px);
             box-sizing: border-box;
-            text-align: center;
         }
-        .portfolio-item iframe {
-            width: 100%; /* 设置视频宽度 */
-            max-width: 560px; /* 最大宽度 */
-            height: 315px; /* 视频高度 */
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
             border-radius: 8px;
-            margin-bottom: 10px; /* 增加视频与标题的间距 */
         }
         .portfolio-item p {
-            font-size: 1em; /* 缩小字体 */
-            color: #333; /* 标题颜色 */
+            text-align: center;
+            margin: 10px 0 0;
+            font-size: 1.2em;
+            color: #000;
+        }
+        .update {
+            background: #f1f1f1;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .update h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .update p {
+            color: #555;
         }
         .footer {
             background: rgba(0, 0, 0, 0.8);
@@ -105,51 +118,15 @@
             width: 100%;
             bottom: 0;
         }
-        /* 隐藏音乐播放器 */
-        audio {
-            display: none;
-        }
-        .cover {
-            background: #000;
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            padding: 10px;
-        }
-        .cover img {
-            width: 100%; /* 封面图宽度 */
-            height: auto;
-            border-radius: 8px;
-        }
-        .cover:hover .play-button {
-            opacity: 1;
-        }
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 50%;
-            padding: 10px;
-            opacity: 0;
-            cursor: pointer;
-        }
-        .play-button::before {
-            content: "▶"; /* 播放按钮的符号 */
-            font-size: 24px;
-            color: #000;
-        }
     </style>
 </head>
 <body>
-    <div class="blurred-background"></div> <!-- 添加背景模糊效果 -->
+    <div class="blurred-background"></div>
     <div class="header">
         <h1>PRTShark</h1>
         <p>欢迎来到我的个人网页！</p>
     </div>
     <div class="container">
-        <!-- 各个平台账号展示 -->
         <div class="section">
             <h2>我的社交媒体账号</h2>
             <div class="social-links">
@@ -160,42 +137,36 @@
             </div>
         </div>
 
-        <!-- 作品展示 -->
         <div class="section">
             <h2>我的作品展示</h2>
-            <div class="portfolio-container">
+            <div class="portfolio">
                 <div class="portfolio-item">
-                    <a class="cover" href="https://player.bilibili.com/player.html?bvid=BV1Ff421z7Rg" target="_blank">
-                        <img src="https://i0.hdslb.com/bfs/archive/1cc1c8d4a9cf9b7b4f480f544ea5caaae87bfa27.jpg" alt="作品封面1">
-                        <div class="play-button"></div>
+                    <a href="https://www.bilibili.com/video/BV1Ff421z7Rg/?spm_id_from=333.999.0.0&vd_source=177a658ccbc5eb31b141f7ed3c7caead" target="_blank">
+                        <img src="https://github.com/PRTShark/PRTShark-Resave/blob/main/GBC1.jpg?raw=true" alt="作品1">
                     </a>
                     <p>【GBC】安和昴全身都很HIP呢！</p>
                 </div>
                 <div class="portfolio-item">
-                    <a class="cover" href="https://player.bilibili.com/player.html?bvid=BV1By411q7qP" target="_blank">
-                        <img src="https://i0.hdslb.com/bfs/archive/dfb7b3b6f23dc5a348f85eb08a3e972768b4fd76.jpg" alt="作品封面2">
-                        <div class="play-button"></div>
+                    <a href="https://www.bilibili.com/video/BV1By411q7qP/?spm_id_from=333.999.0.0&vd_source=177a658ccbc5eb31b141f7ed3c7caead" target="_blank">
+                        <img src="https://github.com/PRTShark/PRTShark-Resave/blob/main/GBC2.jpg?raw=true" alt="作品2">
                     </a>
                     <p>【GBC】没想成为你的𝙉𝙞𝙜𝙝𝙩𝙢𝙖𝙧𝙚</p>
                 </div>
                 <div class="portfolio-item">
-                    <a class="cover" href="https://player.bilibili.com/player.html?bvid=BV1D4421Q7TG" target="_blank">
-                        <img src="https://i0.hdslb.com/bfs/archive/0876f051fffc340f91408157170f8e39142dc39b.jpg" alt="作品封面3">
-                        <div class="play-button"></div>
+                    <a href="https://www.bilibili.com/video/BV1D4421Q7TG/?spm_id_from=333.999.0.0&vd_source=177a658ccbc5eb31b141f7ed3c7caead" target="_blank">
+                        <img src="https://github.com/PRTShark/PRTShark-Resave/blob/main/GBC3.jpg?raw=true" alt="作品3">
                     </a>
                     <p>【Girls Band Cry】王妃</p>
                 </div>
                 <div class="portfolio-item">
-                    <a class="cover" href="https://player.bilibili.com/player.html?bvid=BV181421r7vy" target="_blank">
-                        <img src="https://i0.hdslb.com/bfs/archive/4c92d22a2e8c26e8f2e0dc9d06c1ed67e0fe8cfb.jpg" alt="作品封面4">
-                        <div class="play-button"></div>
+                    <a href="https://www.bilibili.com/video/BV181421r7vy/?spm_id_from=333.999.0.0&vd_source=177a658ccbc5eb31b141f7ed3c7caead" target="_blank">
+                        <img src="https://github.com/PRTShark/PRTShark-Resave/blob/main/GBC4.jpg?raw=true" alt="作品4">
                     </a>
                     <p>【GBC】“我没有走错路”</p>
                 </div>
             </div>
         </div>
 
-        <!-- 动态更新 -->
         <div class="section">
             <h2>最新动态</h2>
             <div class="update">
@@ -206,13 +177,11 @@
                 <h3>动态标题2</h3>
                 <p>这是另一个动态的内容。</p>
             </div>
-            <!-- 可以添加更多动态内容 -->
         </div>
     </div>
     <div class="footer">
         <p>© 2024 PRTShark. All rights reserved.</p>
     </div>
-    <!-- 音乐播放器 -->
     <audio src="https://github.com/PRTShark/PRTShark-Resave/blob/main/%E5%96%9C%E5%8A%87-%E6%98%9F%E9%87%8E%E6%BA%90.128.mp3?raw=true" autoplay loop></audio>
 </body>
 </html>
