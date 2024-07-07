@@ -109,6 +109,37 @@
         audio {
             display: none;
         }
+        .cover {
+            background: #000;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        .cover img {
+            width: 100%; /* 封面图宽度 */
+            height: auto;
+            border-radius: 8px;
+        }
+        .cover:hover .play-button {
+            opacity: 1;
+        }
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            padding: 10px;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .play-button::before {
+            content: "▶"; /* 播放按钮的符号 */
+            font-size: 24px;
+            color: #000;
+        }
     </style>
 </head>
 <body>
@@ -134,19 +165,31 @@
             <h2>我的作品展示</h2>
             <div class="portfolio-container">
                 <div class="portfolio-item">
-                    <iframe src="https://player.bilibili.com/player.html?bvid=BV1Ff421z7Rg" frameborder="0" allowfullscreen></iframe>
+                    <a class="cover" href="https://player.bilibili.com/player.html?bvid=BV1Ff421z7Rg" target="_blank">
+                        <img src="https://i0.hdslb.com/bfs/archive/1cc1c8d4a9cf9b7b4f480f544ea5caaae87bfa27.jpg" alt="作品封面1">
+                        <div class="play-button"></div>
+                    </a>
                     <p>【GBC】安和昴全身都很HIP呢！</p>
                 </div>
                 <div class="portfolio-item">
-                    <iframe src="https://player.bilibili.com/player.html?bvid=BV1By411q7qP" frameborder="0" allowfullscreen></iframe>
+                    <a class="cover" href="https://player.bilibili.com/player.html?bvid=BV1By411q7qP" target="_blank">
+                        <img src="https://i0.hdslb.com/bfs/archive/dfb7b3b6f23dc5a348f85eb08a3e972768b4fd76.jpg" alt="作品封面2">
+                        <div class="play-button"></div>
+                    </a>
                     <p>【GBC】没想成为你的𝙉𝙞𝙜𝙝𝙩𝙢𝙖𝙧𝙚</p>
                 </div>
                 <div class="portfolio-item">
-                    <iframe src="https://player.bilibili.com/player.html?bvid=BV1D4421Q7TG" frameborder="0" allowfullscreen></iframe>
+                    <a class="cover" href="https://player.bilibili.com/player.html?bvid=BV1D4421Q7TG" target="_blank">
+                        <img src="https://i0.hdslb.com/bfs/archive/0876f051fffc340f91408157170f8e39142dc39b.jpg" alt="作品封面3">
+                        <div class="play-button"></div>
+                    </a>
                     <p>【Girls Band Cry】王妃</p>
                 </div>
                 <div class="portfolio-item">
-                    <iframe src="https://player.bilibili.com/player.html?bvid=BV181421r7vy" frameborder="0" allowfullscreen></iframe>
+                    <a class="cover" href="https://player.bilibili.com/player.html?bvid=BV181421r7vy" target="_blank">
+                        <img src="https://i0.hdslb.com/bfs/archive/4c92d22a2e8c26e8f2e0dc9d06c1ed67e0fe8cfb.jpg" alt="作品封面4">
+                        <div class="play-button"></div>
+                    </a>
                     <p>【GBC】“我没有走错路”</p>
                 </div>
             </div>
@@ -169,7 +212,7 @@
     <div class="footer">
         <p>© 2024 PRTShark. All rights reserved.</p>
     </div>
-    <!-- 添加背景音乐播放器 -->
+    <!-- 音乐播放器 -->
     <audio src="https://github.com/PRTShark/PRTShark-Resave/blob/main/%E5%96%9C%E5%8A%87-%E6%98%9F%E9%87%8E%E6%BA%90.128.mp3?raw=true" autoplay loop></audio>
 </body>
 </html>
