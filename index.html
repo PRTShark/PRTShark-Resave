@@ -66,13 +66,28 @@
         }
         .social-links a {
             display: block;
-            color: #333;
+            color: #fff;
             text-decoration: none;
             margin-bottom: 10px;
             font-size: 1.1em;
+            padding: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .social-links a.youtube {
+            background-color: #FF0000;
+        }
+        .social-links a.twitter {
+            background-color: #1DA1F2;
+        }
+        .social-links a.tiktok {
+            background-color: #69C9D0;
+        }
+        .social-links a.email {
+            background-color: #444;
         }
         .social-links a:hover {
-            text-decoration: underline;
+            transform: scale(1.1);
         }
         .portfolio {
             display: flex;
@@ -130,10 +145,10 @@
         <div class="section">
             <h2>我的社交媒体账号</h2>
             <div class="social-links">
-                <a href="https://www.youtube.com/channel/UCzx784J0da3xi33-ZsAiHSg" target="_blank">YouTube 频道</a>
-                <a href="https://x.com/lzpsmax" target="_blank">X（原Twitter）账号</a>
-                <a href="https://www.tiktok.com/@prtshark?lang=zh-Hans" target="_blank">TikTok 账号</a>
-                <a href="mailto:lzpsmax@163.com" target="_blank">电子邮箱</a>
+                <a class="youtube" href="https://www.youtube.com/channel/UCzx784J0da3xi33-ZsAiHSg" target="_blank">YouTube 频道</a>
+                <a class="twitter" href="https://x.com/lzpsmax" target="_blank">X（原Twitter）账号</a>
+                <a class="tiktok" href="https://www.tiktok.com/@prtshark?lang=zh-Hans" target="_blank">TikTok 账号</a>
+                <a class="email" href="mailto:lzpsmax@163.com" target="_blank">电子邮箱</a>
             </div>
         </div>
 
