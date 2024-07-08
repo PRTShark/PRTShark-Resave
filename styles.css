@@ -56,7 +56,18 @@ body {
     padding-bottom: 10px;
     margin-bottom: 10px;
     color: #000;
+    position: relative; /* 使伪元素定位相对于标题 */
+    padding-left: 30px; /* 为圆点留出空间 */
     font-size: 1.5em; /* 文字大小 */
+}
+.section h2::before {
+    content: "●"; /* 圆点字符 */
+    color: #000; /* 圆点颜色 */
+    font-size: 1.5em; /* 圆点大小，和文字高度一样 */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* 垂直居中圆点 */
 }
 .social-links a {
     display: inline-block;
@@ -146,4 +157,36 @@ body {
     .header p {
         font-size: 0.9em;
     }
+}
+.like-system {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+    left: 10%; /* 将按钮放置在中间偏左的位置 */
+}
+
+.like-system button {
+    background-color: #FF0000; /* 红色背景 */
+    color: #fff; /* 白色字体 */
+    border: none;
+    padding: 20px 40px; /* 增大按钮的大小 */
+    font-size: 1.5em; /* 增大字体 */
+    border-radius: 10px; /* 圆角 */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: "Microsoft JhengHei UI", Arial, sans-serif; /* 使用 UI 字体 */
+}
+
+.like-system button:hover {
+    background-color: #CC0000; /* 鼠标悬停时颜色 */
+}
+
+.like-system button:active {
+    transform: scale(0.95); /* 点击时缩放效果 */
+}
+
+.like-system p {
+    font-size: 1.2em;
+    color: #000;
+    margin-top: 10px;
 }
