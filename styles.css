@@ -56,18 +56,7 @@ body {
     padding-bottom: 10px;
     margin-bottom: 10px;
     color: #000;
-    position: relative; /* 使伪元素定位相对于标题 */
-    padding-left: 30px; /* 为圆点留出空间 */
     font-size: 1.5em; /* 文字大小 */
-}
-.section h2::before {
-    content: "●"; /* 圆点字符 */
-    color: #000; /* 圆点颜色 */
-    font-size: 1.5em; /* 圆点大小，和文字高度一样 */
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%); /* 垂直居中圆点 */
 }
 .social-links a {
     display: inline-block;
