@@ -140,8 +140,6 @@ body {
 .like-system {
     text-align: center;
     margin: 20px 0;
-    position: relative;
-    left: 10%; /* 将按钮放置在中间偏左的位置 */
 }
 
 .like-system button {
@@ -169,3 +167,4 @@ body {
     color: #000;
     margin-top: 10px;
 }
+
