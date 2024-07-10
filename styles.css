@@ -146,8 +146,8 @@ body {
     background-color: #FF0000; /* 红色背景 */
     color: #fff; /* 白色字体 */
     border: none;
-    padding: 20px 40px; /* 增大按钮的大小 */
-    font-size: 1.5em; /* 增大字体 */
+    padding: 40px 80px; /* 增大按钮的大小 */
+    font-size: 2em; /* 增大字体 */
     border-radius: 10px; /* 圆角 */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
