@@ -146,16 +146,20 @@ body {
     background-color: #FF0000; /* 红色背景 */
     color: #fff; /* 白色字体 */
     border: none;
-    padding: 40px 80px; /* 增大按钮的大小 */
-    font-size: 2em; /* 增大字体 */
-    border-radius: 10px; /* 圆角 */
+    padding: 20px; /* 增大按钮的大小 */
+    font-size: 1.2em; /* 增大字体 */
+    border-radius: 8px; /* 圆角 */
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    font-family: "Microsoft JhengHei UI", Arial, sans-serif; /* 使用 UI 字体 */
+    transition: transform 0.3s, background-color 0.3s;
+    display: inline-block;
+    width: calc(50% - 20px); /* 与作品展示框相同宽度 */
+    max-width: calc(50% - 20px); /* 与作品展示框相同宽度 */
+    box-sizing: border-box; /* 确保宽度计算正确 */
 }
 
 .like-system button:hover {
     background-color: #CC0000; /* 鼠标悬停时颜色 */
+    transform: scale(1.03); /* 缩放效果 */
 }
 
 .like-system button:active {
@@ -167,4 +171,5 @@ body {
     color: #000;
     margin-top: 10px;
 }
+
 
